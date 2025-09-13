@@ -1,0 +1,24 @@
+{
+	"education": [
+		{
+			"name": "University of Chicago",
+			"href": "https://masters.cs.uchicago.edu/",
+			"title": "M.S. in Computer Science",
+			"logo": "/uchicago.jpg",
+			"start": "Sep 2025"
+		},
+		{
+			"name": "Purdue University",
+			"href": "https://engineering.purdue.edu/MSE",
+			"title": "B.S. in Materials Science and Engineering",
+			"minor": "Minor in Mathematics",
+			"logo": "/purdue.png",
+			"start": "Aug 2017",
+			"end": "May 2021",
+			"description" : [
+				"Dean's List 7/8 semesters",
+				"Semester Honors 5/8 semesters"
+			]
+		}
+	]
+}

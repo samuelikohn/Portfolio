@@ -1,0 +1,79 @@
+---
+title: "K-Puzz: Algorithms in Action"
+summary: "Play randomly generated Kjarposko puzzles and share your results."
+image: "/kpuzz_blog.png"
+publishedAt: "2025-09-13"
+---
+
+Intro
+
+History - liking puzzles and murderous maths
+Refine full stack skills, complexity of games, different than typical full stack app
+
+I've always liked puzzles, from Sudoku to games like [Antichamber](https://store.steampowered.com/app/219890/Antichamber/).
+Rarely it seems that is there's a particular puzzle I really enjoy, there is an abundance of it around to keep me satisfied. On top of that,
+ideas always pop up for how to tweak the puzzle rules to make it more interesting or more difficult. That's one of the joys of writing software,
+it gives me the ability to make those ideas come to fruition.
+
+[Kjarposko puzzles], abbreviated "K-puzz", were created by [Kjartan Poskitt] and published by [Murderous Maths]. This is an example of a case
+where I wish there were more Kjarposko puzzles from the official source. I've never seen these types of puzzles outside of the Murderous Maths
+book I had as a kid.
+
+In making what is effectively a clone of K-puzz, I wanted to use this opportuity to refine my full-stack skills. The complexity that
+arises from the interactive elements of puzzles and games yields a set of challenges that are different from a typcal full-stack application.
+
+S
+
+I didn't plan on changing the rules of K-puzz at all. The innovation instead comes from the way the puzzles are implmented on a web application
+and the accompanying UX. I wanted the puzzles to be programmatically generated on the fly and to be random. Typically self-contained logic puzzles
+similar to K-puzz or Sudoku are hand-crafted and the data for each individual puzzle are stored on a database. I don't want to manually write
+hundreds of puzzles (and if I needed to I'd probably come up with a method to programmatically generate them anyways). This allows for an
+effectively infinite pool of puzzles with almost no storage required. Of course being able go back to previous puzzles played is a must-have
+feature, so the puzzle generation needs to be deterministic.
+
+In pursuit of improving my skills, I decided to use React for the front end. I already had some experience with React, however not in the area
+of interactivty required by K-puzz. This gives me an excuse to dive further into the React ecosystem, as well as understand how to incorporate it
+with the back end into a full-stack project.
+
+T
+
+Start with front end, get data format for puzzles
+matrix? or something else?
+programmatically generate puzzles and display
+Translate between IDs and puzzles?
+Decide backend and DB
+
+A
+
+Learned react,
+ui design was straightforward
+Generateing puzzles was hard
+coming up with algorithem AND writing efficient code
+found something that works
+Path finding involved tricky algorithms, leetcode practice helped
+shortest path with obstacles
+Learned node and express, decided on postgres as indusry standards.
+GET IDs based on time, store puzzle data and ids in DB
+Practically, not great, requires http requests and DB storage, history of all puzzles generated not necssary
+But excuse to make a full stack app
+Can refactor to front end only for live demo
+
+R
+
+end result works
+first react project, code is messy, room for refactoring.
+puzzle generatino on client is potentially taxing
+
+L
+
+Learned lots of react, picked up node adn express as well
+Better at UI/UX
+Again, learned more about what there is to learn
+
+Conclusion
+
+Future improvements, separate ids by puzzle size
+add query strings for puzzle id
+pause button
+share results link
+More than MVP, i'm happy

@@ -1,0 +1,71 @@
+---
+title: "My Portfolio is Live!"
+summary: "All about this website and the design choices that went into it."
+image: "/sam.jpg"
+publishedAt: "2025-07-30"
+---
+
+I'm excited to finally release my portfolio website to the public! The purpose of this portfolio site is to act as a
+centralized hub I can point people to that houses everything about me: experience, contact info, projects, etc. I've
+used this opportunity to include some extra fancy features, namely this blog where I'll talk about my experiences and
+projects, and an AI-powered chatbot that can answer anything about me or this website!
+
+## Built Not From Scratch
+
+The design and code for this site are based on an open-source template from [tedawf.com](https://tedawf.com). You'll
+notice both websites are very similar, and that's intentional. Ted did a really great job with his site, so why reinvent
+the wheel? I'm a fan of how career and education experience are handled on the home page; having clickable tabs is a
+much better UX than scrolling between different sections. I like having a few preview project and blog post cards on
+the home page as well.
+
+I wanted to host a blog on my site even before deciding on this template, mainly to talk more about my projects outside
+of the documentation. I prefer hosting the blog myself, as opposed to a 3rd-party site such as Medium. An aspect of how
+this template handles the blog posts I like is the use of MDX. Yes, MDX is to MD as JSX is to JS. This format allows,
+among many other things, the embedding of React components directly into markdown files. I'm sure this will be a very
+cool feature come future blog posts.
+
+The last element of this template I want to talk about is the AI chatbot. I wish I could take credit as this is a very
+cool concept. Having experience working with LLMs already, This immediately stood out as an opportunity to present my
+portfolio content in a way that's directly relevant to my work.
+
+## Features
+
+### Simplistic, Responsive UI
+
+I really enjoy designing the UI/UX elements of applications. I have a lot of experience being a user, so I know what UI
+elements make for a good experience. The homepage is designed to have the most import information, contact info and
+experience, immediately available and within close proximity of each other. I elected to keep the preview cards for
+projects and blog posts, this allows the user to get a glimpse into what the website offers without needing to click
+through the nav bar.
+
+### Blog
+
+The main drive for creating a blog was to have a place to talk more about my personal projects. But this will also be a
+place where I can share general experiences and thoughts relating to my software career. Expect infrequent updates!
+
+### Contact Form
+
+A personal website isn't complete without an email contact form. The original website template used Resend for this.
+However, Resend requires a custom domain to send emails from. I decided that for a simple contact form that's not
+meaningfully different from linking my email, spending money on a custom domain is overkill. I opted to use Web3Forms,
+which achieves what I need with minimal setup.
+
+### AI-Powered Chatbot
+
+The coolest feature of my website is I-AM, a chatbot trained on my portfolio. Ask it anything about me or the site! Why
+is the chatbot named I-AM? Because my name is Sam of course!
+
+## The Technical Details
+
+The programming for this website was done using Next.js + TypeScript and Tailwind CSS. At the time of making this website
+I already had experience with React, Node, and Express. Given the large amount of overlap with my existing skills, this
+was a clear opportunity to learn a new framework. Using Next.js allows for easy deployment on Vercel. The UI elements are
+from Shadcn. They come as React components already written in `.tsx` files, which makes integrating with Next.js easy as well.
+
+For the Chatbot I chose to use Gemini. I tend to prefer Gemini for smaller, everyday tasks, the responses are fairly concise, as
+opposed to ChatGPT which can smother the user in flattery. The embedding vectors are calculated using Langchain and stored
+in a specialized vector database on AstraDB. I also used a redis from Upstash for caching chats. 
+
+---
+
+Thanks for checking out my portfolio! I’m excited to keep learning and improving. Feel free to explore and reach out if you have any questions.

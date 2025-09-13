@@ -1,0 +1,71 @@
+{
+	"projects": [
+		{
+			"name": "K-Puzz",
+			"description": "Play randomly generated Kjarposko puzzles and share your results.",
+			"image": "/kpuzz.png",
+			"href": "/blog/kpuzz",
+			"tags": [
+				"JavaScript",
+				"React.js",
+				"Node.js",
+				"Express.js",
+				"PostgreSQL"
+			],
+			"links": [
+				{
+					"name": "Live Website",
+					"href": "https://samuelikohn.github.io/kpuzz/",
+					"icon": "globe"
+				},
+				{
+					"name": "Source",
+					"href": "https://github.com/samuelikohn/K-Puzz",
+					"icon": "github"
+				}
+			]
+		},
+		{
+			"name": "SET",
+			"description": "Recreation of the SET card game. Adds several new game modes and customizability options.",
+			"image": "/set.png",
+			"href": "/blog/set",
+			"tags": [
+				"Python",
+				"PyQT6"
+			],
+			"links": [
+				{
+					"name": "Source & Download",
+					"href": "https://github.com/samuelikohn/set",
+					"icon": "github"
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"description": "My personal portfolio site! (Yes the one you're looking at right now)",
+			"image": "",
+			"href": "/blog/my-portfolio-is-live",
+			"tags": [
+				"Next.js",
+				"React",
+				"Gemini AI",
+				"LangChain",
+				"TypeScript",
+				"Tailwind",
+				"Shadcn",
+				"Upstash",
+				"AstraDB",
+				"Vercel"
+			],
+			"links": [
+				{
+					"name": "Source",
+					"href": "https://github.com/samuelikohn",
+					"icon": "github"
+				}
+			]
+		}
+	]
+}

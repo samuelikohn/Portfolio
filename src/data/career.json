@@ -1,0 +1,30 @@
+{
+	"career": [
+		{
+			"name": "Software Developer",
+			"title": "1099 Consultant",
+			"logo": "/indy.png",
+			"start": "Dec 2022",
+			"end": "Sep 2025",
+			"description": [
+				"Provided training for large language models used in advanced AI applications via synthetic data on programming, data analysis, and complex math tasks",
+				"Built full-stack web applications using React, Node.js, and Express.js",
+				"Developed desktop GUI apps and scripts for automating business processes using Python and PyQT6",
+				"Created custom Microsoft Excel add-ins using VBA to assist with client goals"
+			]
+		},
+		{
+			"name": "Materials Engineering Software Consultant",
+			"href": "https://mdmi.com/",
+			"title": "Materials Data Management",
+			"logo": "/mdmi.jpg",
+			"start": "Jan 2022",
+			"end": "Dec 2022",
+			"description": [
+				"Worked directly with clients in techincal and non-technical roles to implemented and customize the GRANTA MI software suite",
+				"Authored scripts using Python, VBA, and XSLT to automate processes and facilitate data transfer between systems",
+				"Crafted data pipelines and workflows by utilizing ETL processes, writing SQL queries against relational databases, and creating data visualizations"
+			]
+		}
+	]
+}

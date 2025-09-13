@@ -1,0 +1,83 @@
+{
+	"certifications": [
+		{
+			"name": "IBM Full-Stack JavaScript Developer Certificate",
+			"href": "https://www.coursera.org/account/accomplishments/specialization/K608PJSL22M8",
+			"logo": "/ibm.jpg",
+			"date": "June 2025",
+			"skills": [
+				"JavaScript",
+				"HTML",
+				"CSS",
+				"Bootstrap",
+				"Tailwind",
+				"React.js",
+				"REST API",
+				"Node.js",
+				"Express.js",
+				"Docker",
+				"Kubernetes",
+				"Git",
+				"GitHub",
+				"SQL",
+				"NoSQL",
+				"MongoDB",
+				"PostgreSQL"
+			]
+		},
+		{
+			"name": "Microsoft Python Development Professional Certificate",
+			"href": "https://www.coursera.org/account/accomplishments/professional-cert/7IQU7C3U4KML",
+			"logo": "/microsoft.png",
+			"date": "May 2025",
+			"skills": [
+				"Python",
+				"Jupyter",
+				"Git",
+				"GitHub",
+				"Plotly",
+				"Matplotlib",
+				"Scikit Learn",
+				"Pandas",
+				"REST API",
+				"Flask",
+				"Vue.js",
+				"HTML",
+				"CSS",
+				"AI",
+				"ML"
+			]
+		},
+		{
+			"name": "Google Advanced Data Analytics Specialization",
+			"href": "https://www.coursera.org/account/accomplishments/specialization/MRO6CJQBV0TH",
+			"logo": "/google.png",
+			"date": "Sep 2024",
+			"skills": [
+				"Python",
+				"Pandas",
+				"NumPy",
+				"EDA",
+				"Tableau",
+				"Power BI",
+				"Scikit Learn",
+				"ML",
+				"Jupyter"
+			]
+		},
+		{
+			"name": "Google Data Analytics Specialization",
+			"href": "https://www.coursera.org/account/accomplishments/specialization/12P7Q59MBNH1",
+			"logo": "/google.png",
+			"date": "Aug 2024",
+			"skills": [
+				"SQL",
+				"Excel",
+				"VBA",
+				"R",
+				"Tableau",
+				"Power BI"
+			]
+		}
+	]
+}

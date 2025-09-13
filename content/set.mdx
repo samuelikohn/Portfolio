@@ -1,0 +1,160 @@
+---
+title: "SET: Colors, Shapes, and Shades, Oh My!"
+summary: "Play the classic card game with more content and customization."
+image: "/set.png"
+publishedAt: "2025-08-30"
+---
+
+SET is a card game designed by Marsha Falco in 1974, and published by Set Enterprises in 1991. This is my recreation of
+the game with lots of new game modes and customizability.
+
+## Features Added
+- #### Game modes
+    - Versus AI
+    - Practice Mode
+    - Time Trials
+    - Alternate Challenges Rules
+
+- #### Customizability
+    - AI difficulty
+    - Number of game parameters (traits and variations of traits)
+    - Shape and color of card symbols
+    - UI cosmetics
+    - Optional practice tools
+
+- #### Scorekeeping
+    - View your best scores/times in game
+    - Categorized by game mode and number of game parameters
+
+If you want to learn more about SET, check out the links at the bottom of the page.
+
+## Where'd This Idea Come From?
+
+I've always wanted to make a digital version of SET. There's plenty of online versions, however they're intended to be
+one-to-one recreations of the game. From the onset, I had two main feature additions in mind: an AI that is consistently
+challenging to play against, and adjustable values for the number of traits and variations of the cards in the deck.
+
+In the online versions of SET I've found, the AI implementation is based on purely random change, the AI chooses random
+cards and checks if those cards form a SET. I wanted my AI implementation to be smarter, in that the AI should find SETs
+faster in collections of cards where SETs are easier for humans to find. I also wanted to make the difficulty of the AI
+adjustable, where the maximum difficulty is extremely challenging for experienced SET veterans.
+
+I love SET, but playing the exact same game each time can become stale. By default, the cards in the SET deck have four
+traits (color, shape, number, and fill), each with three variations. To keep the game interesting I wanted the number of
+traits and number of variations per trait to be adjustable. This could make the game easier or harder depending on the
+settings while allowing for different patterns and strategies in the game.
+
+## Conceptualizing a Concept
+
+Already having a fair amount of experience with Python at this point in my career, I decided to make SET as a desktop app
+with Python and a GUI library. Tkinter would naturally be the first choice. Other design decisions I elected to figure out
+on the fly. While this approach is absolutely not the most efficient, for the purposes of a side project, efficiency is much
+less important than simply starting the project.
+
+One key issue I hadn't ironed out before starting was how I was doing to display cards on screen. Using hard-coded image files
+would be easier to implement but would significantly increase the file size of the release. Alternatively, I could
+programmatically draw the cards on screen, which also allows for customization down the line, but this implementation would
+be much more complex, given that I didn't have a full understanding of Tkinter's capabilities at the time.
+
+## Time To Get the Hands Dirty
+
+Immediately, leaving the issue of displaying cards undecided led to a roadblock. When mocking up images for cards, I grossly
+underestimated the number of images needed. A standard SET deck has 81 cards, three variations to the power of four traits.
+Wanting to scale those numbers for my recreation, a full deck with five traits and five variations per trait would need
+5<sup>5</sup> = 3,125 images. However, when drawing images using Tkinter, an even bigger problem appeared: Tkinter doesn't
+support antialiasing.
+
+For those who don't know, antialiasing refers to the smoothing of edges drawn on a computer screen. Because pixels are
+arranged in a square grid, anything other than a perfectly vertical or horizontal line will appear jagged. There's multiple
+different antialiasing techniques, which have different effects depending on the graphical fidelity of your application. For
+my purposes, any type of smoothing for jagged lines is better than nothing.
+
+![Antialiasing Example](/antialiasing.png)
+
+With a quick bit of research into other Python GUI options, I settled on PyQT. PyQT is known to have a steep learning curve
+but is a much more powerful library than Tkinter or any other easily available options. I was confident that PyQT would be
+able to handle all the requirements for drawing shapes programmatically, as well as possible future additions to the project,
+so I accepted the challenge of learning PyQT.
+
+And indeed, PyQT is a very capable library. In general, any amount of customization or flexibility I needed I found in some
+feature of PyQT. To give a specific example, the fill pattern of shapes is a variable in the base SET game. PyQT comes with
+support for different shape fill patterns out of the box via enums on brush properties.
+
+As another example, when implementing the AI, I needed a way to delay when AI-found SETs are claimed after the AI finds them.
+The AI search would effectively be instantaneous, which is bad for gameplay as the user would never get a chance to actually
+play the game. One potential option for this would be to create a separate thread to run the AI and sleep that thread until
+a SET is ready to be claimed. Introducing multithreading brings another suite of complications that, in my opinion, aren't worth
+it unless multithreading is truly necessary. Luckily, PyQT has a built-in timer object that functions exactly as needed. A timer
+can be connected to a function which is run after a predetermined amount of time.
+
+## The Colloquial Kind, Not the Machine Learning Kind.
+
+To clarify, when I say "AI", I’m referring to an algorithm that mimics the decisions a human would make while playing SET. This
+algorithm isn't "intelligent" in any sense of the word and doesn't involve machine learning.
+
+One of my requirements for this algorithm was that it shouldn't be random, it should prioritize finding SETs where the cards are
+more similar to each other. The naive solution of iterating over every possible combination of cards until a valid SET is found
+doesn't satisfy this requirement and is too slow at large scales.
+
+To prioritize SETs that share common variations, I decided on an iterative approach. The AI should iterate over each variation
+of each trait, restricting its domain from the entire collection of cards in play to only cards with the current variation, and
+searching within those selected cards. So, what does it mean to "search"? This led to a recursive approach. "Searching" simply means
+recursing with a smaller selection of cards as input. For the base cases, if the number of selected cards is greater than the
+number of cards needed to form a SET, the selection is filtered by adding an additional trait the cards should share, then the
+search function is recursively called. If the number of selected cards is less than what is needed to form a SET, then a SET
+simply can't exist so the search terminates. If the number of selected cards matches what is needed to form a SET, those cards
+can be directly checked to see if they form a SET.
+
+<SetAIDemo />
+
+The AI counts "steps" as it follows this algorithm, each step corresponds to a decision a human would make if they were to follow
+the algorithm as a flow chart. The number of steps is multiplied by some constant to determine the amount of time to wait before
+the AI "claims" its SET. That constant can be changed to make the AI faster or slower, which creates an adjustable difficulty setting.
+
+## Not an Oopsie
+
+I started writing the code from scratch using object-oriented programming design principles. I had working knowledge of OOP, but had
+never put it into practice at this scale. In doing so, I found common principles, such as abstraction and inheritance, manifested
+themselves organically. These design principles emerged naturally as a result of writing intuitive code, as opposed to deliberately
+designing the code to fit the paradigm.
+
+For example, I wanted to add keyboard navigation to the UI. My first approach to doing this was subclassing PyQT UI widgets, which is
+the most idiomatic way to implement this functionality. When new ideas come up in the future, having the widgets subclassed allowed
+further customization to easily be added.
+
+## How'd it All Turn Out?
+
+The final application was compiled with PyInstaller, resulting in an EXE that can be easily downloaded and run. It's understandable
+if some people don't want to run an EXE directly from the internet, so both the source code and releases are provided on my GitHub.
+
+In my opinion SET plays great. The AI is balanced perfectly and other people who have played it have loved it. Aside from some bug
+fixes there haven't been any changes to the code. The game is lots of fun, SET is a great brain challenge on higher difficulties or
+simply a relaxing time killer.
+
+## Looking Back
+
+This project improved several key skills for me. There was a big jump in my knowledge of Python, UI/UX design, and putting
+algorithms into practice. The most significant improvement in my skills from this project was with object-oriented programming
+and software design. I gained a lot of experience in implementing specific OOP design principles. Something I appreciate is that
+these design choices, such as how to structure classes while keeping abstraction and inheritance in mind, emerged naturally
+from writing effective code. This was very helpful in understanding why the OOP paradigm is the way it is.
+
+When starting this project, I was more concerned with getting any amount of code written, more than taking the time to properly plan
+out the project. As a result, there was a fair amount of scope creep. This was expected, I was aware that spending less time on planning
+would lead to more time needed as ideas are added and changed. This manifests as lots of refactoring in the code to accommodate new
+features. I stuck with the OOP design throughout, and because of the amount of refactoring done, the code quality is very good.
+Obviously, my code isn't perfect, there's some room for improvement, but I'm happy with the functionality and performance of the application.
+
+---
+
+This was a big learning experience for me in terms of Python proficiency and software design. While one major project
+doesn't make me an expert, this was very helpful for learning what things there are to learn.
+
+Also, SET is also a lot of fun to play, you can download the source code or an EXE from the link below.
+
+### Links
+
+- [Source & Download](https://github.com/samuelikohn/set)
+- [About SET](https://en.wikipedia.org/wiki/Set_(card_game))
+- [Set Enterprises, Inc.](https://www.setgame.com/)
+- [Purchase Official Game](https://www.playmonster.com/product/set/)

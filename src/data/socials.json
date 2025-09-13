@@ -1,0 +1,19 @@
+{
+	"socials": [
+		{
+			"name": "LinkedIn",
+			"href": "https://www.linkedin.com/in/samuel-kohn-687596182/",
+			"icon": "linkedin"
+		},
+		{
+			"name": "GitHub",
+			"href": "https://github.com/samuelikohn",
+			"icon": "github"
+		},
+		{
+			"name": "Email",
+			"href": "mailto:samuelikohn@gmail.com",
+			"icon": "mail"
+		}
+	]
+}
