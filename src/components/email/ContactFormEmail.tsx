@@ -21,7 +21,7 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
 		<p>{message}</p>
 		<hr />
 		<p>Thank you for your message, {name}! I will reply as soon as I can.</p>
-		<p>&copy; 2025 samuelikohn.com</p>
+		<p>&copy; 2025 samuelikohn.github.io</p>
 	</div>
 );
 

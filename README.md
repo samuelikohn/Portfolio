@@ -6,7 +6,7 @@ Built using the template from [https://tedawf.com](https://tedawf.com).
 
 ## Live Demo
 
-Check it out here: **[INSERT](INSERT)**
+Check it out here: **[samuelikohn.github.io](https://personalportfolio-git-main-sam-kohns-projects.vercel.app/)**
 
 ## Features
 
@@ -19,21 +19,20 @@ Check it out here: **[INSERT](INSERT)**
 
 ## Tech Stack
 
-* Next.js + TypeScript
-* Tailwind CSS
-* UI: Shadcn
-* Email integration: Web3Forms
-* Chatbot: Gemini Flash 2.5 + Google GenAI API
-* Embedding vector storage: AstraDB
-* Cache redis: Upstash
-* Hosting and deployment: Vercel
+- Next.js + TypeScript
+- Tailwind CSS
+- UI: Shadcn
+- Email integration: Web3Forms
+- Chatbot: Gemini Flash 2.5 + Google GenAI API
+- Embedding vector storage: AstraDB
+- Cache redis: Upstash
+- Hosting and deployment: Vercel
 
 
 
 TODO
-Deploy
 redirect from github
 rewrite resume and update experience + file
-SET project/blog links and push/compile
-kpuzz blog links
-readme links
+kpuzz fixes and readme
+recompile kpuzz
+[https://personalportfolio-git-main-sam-kohns-projects.vercel.app/]
