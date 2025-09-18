@@ -45,7 +45,7 @@
 		{
 			"name": "Portfolio",
 			"description": "My personal portfolio site! (Yes the one you're looking at right now)",
-			"image": "",
+			"image": "/portfolio.png",
 			"href": "/blog/my-portfolio-is-live",
 			"tags": [
 				"Next.js",
