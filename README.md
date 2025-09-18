@@ -2,13 +2,11 @@
 
 A clean, minimal portfolio website built with Next.js, Tailwind CSS, and Shadcn UI. Features an AI chatbot, email contact form, and blog.
 
-> Built this for fun and decided to open source it properly after getting lots of requests for permission to copy it!
+Built using the template from [https://tedawf.com](https://tedawf.com).
 
 ## Live Demo
 
-🌐 Check it out here: **[https://tedawf.com](https://tedawf.com)**
-
-![Portfolio Screenshot](public/tedawf-com-2.png)
+Check it out here: **[INSERT](INSERT)**
 
 ## Features
 
@@ -30,24 +28,12 @@ A clean, minimal portfolio website built with Next.js, Tailwind CSS, and Shadcn 
 * Cache redis: Upstash
 * Hosting and deployment: Vercel
 
-## Deployment
-
-Deploy to Vercel:
-
-1. Push to GitHub
-2. Connect repo to Vercel
-3. Add environment variables
-4. Deploy
-
-
-
-
 
 
 TODO
-README
 Deploy
 redirect from github
-kpuzz blog
 rewrite resume and update experience + file
-portfolio blog/card pictures
+SET project/blog links and push/compile
+kpuzz blog links
+readme links

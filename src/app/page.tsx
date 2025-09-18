@@ -34,11 +34,11 @@ export default async function Home() {
 				/>
 				<div className="flex max-w-[320px] flex-col sm:max-w-full">
 					<h1 className="title text-balance text-4xl sm:text-5xl">
-						Hi I'm Sam!
+						Hi I&apos;m Sam!
 					</h1>
 
 					<p className="mt-2 whitespace-nowrap text-sm font-medium sm:text-base">
-						I'm a software developer based in Chicago, IL
+						I&apos;m a software developer based in Chicago, IL
 					</p>
 
 					<p className="mt-4 max-w-sm text-balance text-sm sm:text-base">

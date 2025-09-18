@@ -1,5 +1,5 @@
-"use client";
-
+"use client"
+import Image from "next/image"
 import { useState, useEffect } from 'react'
 
 export default function SetAIDemo() {
@@ -118,7 +118,7 @@ export default function SetAIDemo() {
 			<div className="grid grid-cols-4 gap-4 grid-rows-3">
 				{
 					images.map((image, i) => (
-						<img
+						<Image
 							key={i}
 							src={'/set' + image.slice(1)}
 							alt={image.slice(2)}
