@@ -4,7 +4,6 @@ import Providers from "@/components/Providers";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Arial from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
