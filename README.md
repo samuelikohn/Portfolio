@@ -6,7 +6,7 @@ Built using the template from [https://tedawf.com](https://tedawf.com).
 
 ## Live Demo
 
-Check it out here: **[samuelikohn.github.io](https://personalportfolio-git-main-sam-kohns-projects.vercel.app/)**
+Check it out here: **[samuelikohn.github.io](https://personalportfolio-three-pi.vercel.app/)**
 
 ## Features
 
