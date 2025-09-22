@@ -24,7 +24,8 @@ Check it out here: **[samuelikohn.github.io](https://personalportfolio-git-main-
 - UI: Shadcn
 - Email integration: Web3Forms
 - Chatbot: Gemini Flash 2.5 + Google GenAI API
-- Embedding vector storage: AstraDB
+- Embedding and vectorization: Langchain
+- Vector storage: AstraDB
 - Cache redis: Upstash
 - Hosting and deployment: Vercel
 
