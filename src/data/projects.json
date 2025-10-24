@@ -26,6 +26,28 @@
 			]
 		},
 		{
+			"name": "GiftLink",
+			"description": "A full-stack web application to connect people giving or receiving househlod items.",
+			"image": "/giftlink.png",
+			"href": "https://github.com/samuelikohn/GiftLink",
+			"tags": [
+				"JavaScript",
+				"React.js",
+				"Node.js",
+				"Express.js",
+				"MongoDB",
+				"JWT",
+				"Postman"
+			],
+			"links": [
+				{
+					"name": "Source",
+					"href": "https://github.com/samuelikohn/GiftLink",
+					"icon": "github"
+				}
+			]
+		},
+		{
 			"name": "SET",
 			"description": "Recreation of the SET card game. Adds several new game modes and customizability options.",
 			"image": "/set.png",
