@@ -5,9 +5,9 @@ import { ChatPromptTemplate, MessagesPlaceholder, PromptTemplate } from "@langch
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { Redis } from "@upstash/redis";
 import { LangChainStream, Message, StreamingTextResponse } from "ai";
-import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
-import { createHistoryAwareRetriever } from "langchain/chains/history_aware_retriever";
-import { createRetrievalChain } from "langchain/chains/retrieval";
+import { createStuffDocumentsChain } from "@langchain/classic/chains/combine_documents";
+import { createHistoryAwareRetriever } from "@langchain/classic/chains/history_aware_retriever";
+import { createRetrievalChain } from "@langchain/classic/chains/retrieval";
 
 export async function POST(req: Request) {
 	try {
@@ -23,8 +23,8 @@ export async function POST(req: Request) {
 			client: Redis.fromEnv(),
 		});
 
-		const chatModel = new ChatGoogleGenerativeAI({  // TODO
-			model: "gemini-2.5-flash",
+		const chatModel = new ChatGoogleGenerativeAI({
+			model: "gemini-3-flash",
 			apiKey: process.env.GOOGLE_API_KEY,
 			streaming: true,
 			callbacks: [handlers],
@@ -33,8 +33,8 @@ export async function POST(req: Request) {
 			temperature: 0,
 		});
 
-		const rephraseModel = new ChatGoogleGenerativeAI({ // TODO
-			model: "gemini-2.5-flash",
+		const rephraseModel = new ChatGoogleGenerativeAI({
+			model: "gemini-3-flash",
 			apiKey: process.env.GOOGLE_API_KEY,
 			verbose: true,
 			cache

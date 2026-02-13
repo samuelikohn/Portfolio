@@ -3,9 +3,9 @@ dotenv.config({ path: ".env.local" });
 
 import { DocumentInterface } from "@langchain/core/documents";
 import { Redis } from "@upstash/redis";
-import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
-import { TextLoader } from "langchain/document_loaders/fs/text";
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import { DirectoryLoader } from "@langchain/classic/document_loaders/fs/directory";
+import { TextLoader } from "@langchain/classic/document_loaders/fs/text";
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { getEmbeddingsCollection, getVectorStore } from "../src/lib/vectordb";
 
 async function generateEmbeddings() {
