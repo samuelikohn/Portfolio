@@ -6,7 +6,7 @@ export default function page() {
 	return (
 		<article className="prose mt-8 pb-16 dark:prose-invert">
 			<div className="space-y-4">
-				<h1 className="title text-5xl">privacy policy.</h1>
+				<h1 className="title text-5xl">Privacy Policy</h1>
 				<p>Last Updated: {lastUpdated}</p>
 			</div>
 			<div className="space-y-4">
