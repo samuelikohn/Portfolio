@@ -59,7 +59,7 @@ export default function ChatMessages({
 			{/* error */}
 			{error && (
 				<p className="text-center text-xs text-rose-500">
-					Something went wrong. Please try again!
+					Something went wrong. Please try again later or contact Sam if the issue persists!
 				</p>
 			)}
 		</div>
