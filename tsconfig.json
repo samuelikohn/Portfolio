@@ -25,6 +25,7 @@
   "exclude": ["node_modules"],
   "ts-node": {
     "compilerOptions": {
+      "target": "ES6",
       "module": "CommonJS",
       "types": ["node", "react", "webpack-env"]
     }
