@@ -11,19 +11,17 @@ if (!endpoint || !token || !collection) {
 }
 
 export async function getVectorStore() {
-	const r = await AstraDBVectorStore.fromExistingIndex(
-		new GoogleGenerativeAIEmbeddings({ model: "text-embedding-005" }),
+	return AstraDBVectorStore.fromExistingIndex(
+		new GoogleGenerativeAIEmbeddings({ model: "embedding-001" }),
 		{
 			token,
 			endpoint,
 			collection,
 			collectionOptions: {
-				vector: { dimension: 768, metric: "cosine" }
+				vector: { dimension: 3072, metric: "cosine" }
 			}
 		}
 	);
-	console.log(r)
-	return r
 }
 
 export async function getEmbeddingsCollection() {
