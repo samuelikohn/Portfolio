@@ -25,6 +25,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vscode
+debug-*.log
+.cursor
 
 # local env files
 .env*.local

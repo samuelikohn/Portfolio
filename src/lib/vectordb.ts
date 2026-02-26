@@ -2,6 +2,23 @@ import { DataAPIClient } from "@datastax/astra-db-ts";
 import { AstraDBVectorStore } from "@langchain/community/vectorstores/astradb";
 import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 
+class SafeGoogleGenerativeAIEmbeddings extends GoogleGenerativeAIEmbeddings {
+	/*
+	Wrapper for Google GenAI embeddings class that handles potential undefined values
+	*/
+	async embedQuery(query: unknown) {
+		const safe = typeof query === "string" ? query : String(query ?? " ");
+		return super.embedQuery(safe);
+	}
+
+	async embedDocuments(docs: unknown[]) {
+		const safeDocs = docs.map((d) =>
+			typeof d === "string" ? d : String(d ?? " "),
+		);
+		return super.embedDocuments(safeDocs);
+	}
+}
+
 const endpoint = process.env.ASTRA_DB_API_ENDPOINT || "";
 const token = process.env.ASTRA_DB_APPLICATION_TOKEN || "";
 const collection = process.env.ASTRA_DB_COLLECTION || "";
@@ -12,7 +29,7 @@ if (!endpoint || !token || !collection) {
 
 export async function getVectorStore() {
 	return AstraDBVectorStore.fromExistingIndex(
-		new GoogleGenerativeAIEmbeddings({ model: "embedding-001" }),
+		new SafeGoogleGenerativeAIEmbeddings({ model: "gemini-embedding-001" }),
 		{
 			token,
 			endpoint,

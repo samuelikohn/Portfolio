@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 		});
 
 		const chatModel = new ChatGoogleGenerativeAI({
-			model: "gemini-3-flash",
+			model: "gemini-flash-latest",
 			apiKey: process.env.GOOGLE_API_KEY,
 			streaming: true,
 			callbacks: [handlers],
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
 		});
 
 		const rephraseModel = new ChatGoogleGenerativeAI({
-			model: "gemini-3-flash",
+			model: "gemini-flash-latest",
 			apiKey: process.env.GOOGLE_API_KEY,
 			verbose: true,
 			cache
