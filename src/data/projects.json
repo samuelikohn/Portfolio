@@ -1,6 +1,30 @@
 {
 	"projects": [
 		{
+			"name": "Recipe Assistant",
+			"description": "A Streamlit-based recipe app powered by OpenAI. Chat with an AI assistant to discover, create, and refine recipes. Save your favorites to the browser's local storage and edit them anytime.",
+			"image": "/recipes.png",
+			"href": "https://the-recipe-assistant.streamlit.app/",
+			"tags": [
+				"Python",
+				"Streamlit",
+				"OpenAI API",
+				"MCP Server"
+			],
+			"links": [
+				{
+					"name": "Live Website",
+					"href": "https://the-recipe-assistant.streamlit.app/",
+					"icon": "globe"
+				},
+				{
+					"name": "Source",
+					"href": "https://github.com/samuelikohn/Recipe-Assistant",
+					"icon": "github"
+				}
+			]
+		},
+		{
 			"name": "K-Puzz",
 			"description": "Play randomly generated Kjarposko puzzles and share your results.",
 			"image": "/kpuzz.png",
