@@ -50,6 +50,28 @@
 			]
 		},
 		{
+			"name": "Untitled Word Game",
+			"description": "Word unscrambling game with procedural levels and ramping difficulty. Customize the game to suit your play style.",
+			"image": "/word_game.png",
+			"href": "https://github.com/samuelikohn/Word-Unscrambler",
+			"tags": [
+				"Python",
+				"PyQT6"
+			],
+			"links": [
+				{
+					"name": "Source",
+					"href": "https://github.com/samuelikohn/Word-Unscrambler",
+					"icon": "github"
+				},
+				{
+					"name": "Video Overview",
+					"href": "https://youtu.be/cRWkMQjN2KQ",
+					"icon": "video"
+				}
+			]
+		},
+		{
 			"name": "GiftLink",
 			"description": "A full-stack web application to connect people giving or receiving househlod items.",
 			"image": "/giftlink.png",
