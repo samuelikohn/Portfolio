@@ -54,7 +54,7 @@ export default async function Home() {
 					</div>
 
 					<section className="mt-6 flex flex-wrap items-center gap-4">
-						<Link href="/resume_sam_kohn.pdf" target="_blank">
+						<Link href="/_resume_sam_kohn.pdf" target="_blank">
 							<Button variant="outline">
 								<span className="font-semibold">Resume</span>
 								<FileDown className="ml-2 size-5" />
