@@ -7,10 +7,10 @@
 			"start": "Dec 2022",
 			"end": "Sep 2025",
 			"description": [
-				"Provided training for large language models used in advanced AI applications via synthetic data on programming, data analysis, and complex math tasks",
-				"Built full-stack web applications using React, Node.js, and Express.js",
-				"Developed desktop GUI apps and scripts for automating business processes using Python and PyQT6",
-				"Created custom Microsoft Excel add-ins using VBA to assist with client goals"
+				"End-to-end application development and automation with Python",
+				"Full-stack web development with ReactJS, NodeJS, ExpressJS, & PostgreSQL",
+				"Evaluation and refinement of AI agents and LLMs on complex software and data science projects",
+				"Custom MS Excel plugins and VBA applications"
 			]
 		},
 		{
@@ -21,9 +21,9 @@
 			"start": "Jan 2022",
 			"end": "Dec 2022",
 			"description": [
-				"Worked directly with clients in techincal and non-technical roles to implemented and customize the GRANTA MI software suite",
-				"Authored scripts using Python, VBA, and XSLT to automate processes and facilitate data transfer between systems",
-				"Crafted data pipelines and workflows by utilizing ETL processes, writing SQL queries against relational databases, and creating data visualizations"
+				"End-to-end data pipelines with Python, SQL, and VBA",
+				"Data analysis, visualization, & dashboards in Python and Tableau",
+				"Client relations for enterprises across multiple sectors for projects grossing over $10 billion in revenue"
 			]
 		}
 	]
